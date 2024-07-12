@@ -127,7 +127,7 @@ export class Registry {
               const dispatchErrorJson = JSON.parse(dispatchError.toString())
 
               reject(
-                new Error(
+                console.error(
                   `Extrinsic failed: ${mapErrorCodeToEnum(dispatchErrorJson.module.error)}`,
                 ),
               )
