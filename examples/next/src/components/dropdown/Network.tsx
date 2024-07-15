@@ -1,4 +1,3 @@
-import { useNetwork } from '@/hooks/useNetwork'
 import type { DropDown } from '@/types/layout'
 import type { Network } from '@autonomys/auto-utils'
 import Link from 'next/link'
@@ -18,7 +17,6 @@ export const NetworkDropdown: FC<DropdownProps> = ({
   isOpen,
   toggleDropdown,
 }) => {
-  const { handleNetworkChange } = useNetwork()
   const params = useParams()
   const packageName = params.package
   const action = params.action

@@ -28,8 +28,7 @@ export const ReceiverInput: FC<InputProps> = ({ id = 'to', value, set }) => {
             onClick={() => set && set(wallet.accounts[0].address)}
           >
             {mockURIs[index].slice(2)}
-          </button>
-          {` `}
+          </button>{' '}
         </>
       ))}
     </div>

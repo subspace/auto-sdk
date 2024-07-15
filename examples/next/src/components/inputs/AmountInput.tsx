@@ -33,8 +33,7 @@ export const AmountInput: FC<InputProps> = ({
             onClick={() => set && set(formatOption(parseInt(option)).toString())}
           >
             {option}
-          </button>
-          {` `}
+          </button>{' '}
         </>
       ))}
   </div>

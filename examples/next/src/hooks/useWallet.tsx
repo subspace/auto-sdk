@@ -12,7 +12,7 @@ export const useWallets = () => {
 
   const handleLoadWallet = useCallback(
     async () => setWalletsSigners(await mockWallets(config)),
-    [config],
+    [config, setWalletsSigners, mockWallets],
   )
 
   useEffect(() => {

@@ -12,7 +12,10 @@ export const useTx = () => {
   const [blockHash, setBlockHash] = useState('')
 
   const handleTx = useCallback(
-    async (tx: SubmittableExtrinsic<'promise', ISubmittableResult>, setErrorForm: any) => {
+    async (
+      tx: SubmittableExtrinsic<'promise', ISubmittableResult>,
+      setErrorForm: (error: string) => void,
+    ) => {
       try {
         if (!selectedWallet) {
           setErrorForm('Wallet not selected')
@@ -27,6 +30,7 @@ export const useTx = () => {
           setErrorForm,
         )
       } catch (error) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         setErrorForm((error as any).message)
       }
     },

@@ -33,7 +33,7 @@ export const Body: FC = () => {
       handleQuery(await balance(api, selectedWallet.accounts[0].address), (v) =>
         setCurrentWalletBalance(v.free.toString()),
       )
-  }, [handleQuery, config, api, selectedWallet])
+  }, [handleQuery, api, selectedWallet])
 
   const body = useMemo(() => {
     switch (packageName) {

@@ -10,7 +10,8 @@ export const useApi = () => {
   const handleLoadApi = useCallback(async () => setApi(await activate(config)), [])
 
   const handleQuery = useCallback(
-    async (query: any, setValue: (value: any) => void, setErrorForm?: (error: any) => void) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    async (query: any, setValue: (value: any) => void, setErrorForm?: (error: string) => void) => {
       setErrorForm && setErrorForm('')
       try {
         if (!api) {
@@ -28,6 +29,7 @@ export const useApi = () => {
 
         return query
       } catch (error) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         setErrorForm && setErrorForm((error as any).message)
       }
     },

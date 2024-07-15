@@ -30,7 +30,7 @@ export const useNetwork = () => {
   useEffect(() => {
     if (networkName && config.networkId !== networkName && Array.isArray(networkName) === false)
       handleNetworkChange(networkName)
-  }, [networkName])
+  }, [networkName, handleNetworkChange, config])
 
   return { config, handleNetworkChange }
 }
