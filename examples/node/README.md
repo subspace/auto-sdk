@@ -8,6 +8,14 @@ Simple list of scripts to query data and execute extrinsics:
 yarn
 ```
 
+## CLI
+
+This option will then open a prompt to select the desired action.
+
+```bash
+yarn cli
+```
+
 ## Run queries
 
 ```bash

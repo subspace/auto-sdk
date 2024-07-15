@@ -84,6 +84,13 @@ To test the packages against a local node, you can use the script at `scripts/ru
 
    The tests will detect the local node and farmer and run the tests against them instead of the public testnet.
 
+## Examples
+
+This project currently count 2 examples:
+
+- [NextJS Example](examples/next/) - A simple NextJS application that uses the `Auto-SDK` packages to interact with the Autonomys Network.
+- [NodeJS Example](examples/node/) - A simple NodeJS application that uses the `Auto-SDK` packages to interact with the Autonomys Network.
+
 ## Workspaces
 
 This project uses workspaces. Packages are located in the `packages` directory. Each package can have its own dependencies and build scripts.
